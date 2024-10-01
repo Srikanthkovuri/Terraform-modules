@@ -13,10 +13,10 @@ resource "aws_security_group" "sg-Ntier" {
 resource "aws_vpc_security_group_ingress_rule" "sg-Ntier" {
   count             = length(var.security_group_info.inbound_rules)
   security_group_id = aws_security_group.sg-Ntier.id
-  ip_protocol       = var.security_group_info.inbound_rules[count.index].protocol
-  cidr_ipv4         = var.security_group_info.inbound_rules[count.index].source
-  from_port         = var.security_group_info.inbound_rules[count.index].port
-  to_port           = var.security_group_info.inbound_rules[count.index].port
+  ip_protocol       = var.security_group_info.inbound_rules[count.index].ip_protocol
+  cidr_ipv4         = var.security_group_info.inbound_rules[count.index].cidr_ipv4
+  from_port         = var.security_group_info.inbound_rules[count.index].from_port
+  to_port           = var.security_group_info.inbound_rules[count.index].to_port
   description       = var.security_group_info.inbound_rules[count.index].description
   depends_on        = [aws_security_group.sg-Ntier]
 }

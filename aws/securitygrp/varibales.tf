@@ -5,6 +5,7 @@ variable "vpc_id" {
 variable "security_group_info" {
     type = object({
       name = string
+      description = string
       inbound_rules = list(object({
         ip_protocol = string
         cidr_ipv4 = string

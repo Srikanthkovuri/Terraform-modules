@@ -51,11 +51,11 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_autoscaling_group.base](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/autoscaling_group) | resource |
-| [aws_launch_template.base](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/launch_template) | resource |
-| [aws_lb.base](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb) | resource |
-| [aws_lb_listener.base](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_listener) | resource |
-| [aws_lb_target_group.base](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group) | resource |
+| [aws_autoscaling_group.base](https://github.com/Srikanthkovuri/Terraform-modules/blob/main/aws/securitygrp/main.tf) | resource |
+| [aws_launch_template.base](https://github.com/Srikanthkovuri/Terraform-modules/blob/main/aws/securitygrp/main.tf) | resource |
+| [aws_lb.base](https://github.com/Srikanthkovuri/Terraform-modules/blob/main/aws/securitygrp/main.tf) | resource |
+| [aws_lb_listener.base](https://github.com/Srikanthkovuri/Terraform-modules/blob/main/aws/securitygrp/main.tf) | resource |
+| [aws_lb_target_group.base](https://github.com/Srikanthkovuri/Terraform-modules/blob/main/aws/securitygrp/main.tf) | resource |
 
 ## Inputs
 

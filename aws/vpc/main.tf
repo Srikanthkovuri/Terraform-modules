@@ -9,8 +9,8 @@ resource "aws_vpc" "Ntier" {
 resource "aws_subnet" "public" {
   # count function determines length of the varibale
   count             = local.public_sub_count > 0 ? local.public_sub_count : 0
-  cidr_block        = var.public_subnet_config[count.index].cidr_block[count.index]
-  availability_zone = var.public_subnet_config[count.index].available_region[count.index]
+  cidr_block        = var.public_subnet_config[count.index].cidr_block
+  availability_zone = var.public_subnet_config[count.index].available_region
   vpc_id            = aws_vpc.Ntier.id
   tags              = var.public_subnet_config[count.index].tags
   depends_on        = [aws_vpc.Ntier]
@@ -19,8 +19,8 @@ resource "aws_subnet" "public" {
 # create private subnets
 resource "aws_subnet" "private" {
   count             = local.private_sub_count > 0 ? local.private_sub_count : 0
-  cidr_block        = var.private_subnet_config[count.index].cidr_block[count.index]
-  availability_zone = var.private_subnet_config[count.index].available_region[count.index]
+  cidr_block        = var.private_subnet_config[count.index].cidr_block
+  availability_zone = var.private_subnet_config[count.index].available_region
   vpc_id            = aws_vpc.Ntier.id
   tags              = var.private_subnet_config[count.index].tags
   depends_on        = [aws_vpc.Ntier]

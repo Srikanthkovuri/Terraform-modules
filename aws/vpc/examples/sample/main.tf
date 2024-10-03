@@ -9,15 +9,15 @@ module "vpc" {
     }
   }
   public_subnet_config = [{
-    cidr_block = ["192.168.0.0/24"]
-    availability_zone         = ["ap-south-1a"]
+    cidr_block = "192.168.0.0/24"
+    availability_zone         = "ap-south-1a"
     tags = {
       Name = "public"
     }
   }]
   private_subnet_config = [{
-    cidr_block = ["192.168.1.0/24"]
-    availability_zone         = ["ap-south-1a"]
+    cidr_block = "192.168.1.0/24"
+    availability_zone         = "ap-south-1a"
     tags = {
       Name = "private"
     }

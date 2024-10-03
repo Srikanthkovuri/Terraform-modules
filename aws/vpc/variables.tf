@@ -7,16 +7,16 @@ variable "vpc_config" {
 }
 variable "public_subnet_config" {
   type = list(object({
-    cidr_block       = list(string)
-    available_region = list(string)
+    cidr_block       = string
+    available_region = string
     tags             = map(string)
   }))
   description = "public_subnets_configuration"
 }
 variable "private_subnet_config" {
   type = list(object({
-    cidr_block       = list(string)
-    available_region = list(string)
+    cidr_block       = string
+    available_region = string
     tags             = map(string)
   }))
   description = "priate_subnets_configuration"
